@@ -59,7 +59,7 @@ class Avatar(object):
             :param s: Seed used by the random generator
             (same seed will produce the same color).
         """
-        seed(s)
+        # seed(s)
         r = v = b = 255
         while r + v + b > 255*2:
             r = randint(0, 255)
@@ -85,6 +85,8 @@ class Avatar(object):
         """
         if len(string) == 0:
             return "#"
+        elif len(string) == 2:
+            return string.upper()        
         else:
             return string[0].upper()
 
