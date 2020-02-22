@@ -76,7 +76,7 @@ class Avatar(object):
         """
         path = os.path.join(os.path.dirname(__file__), 'data',
                             "Inconsolata.otf")
-        return ImageFont.truetype(path, size=int(0.8 * size))
+        return ImageFont.truetype(path, size=int(0.4 * size))
 
     @staticmethod
     def _text(string):
@@ -97,6 +97,5 @@ class Avatar(object):
         """
         width, height = font.getsize(text)
         left = (size - width) / 2.0
-        # I just don't know why 5.5, but it seems to be the good ratio
-        top = (size - height) / 5.5
+        top = (size - height) / 2.3
         return left, top
